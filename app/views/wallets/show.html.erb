@@ -1,0 +1,39 @@
+<section class="flex justify-between max-w-screen-2xl max-h-max mt-12 w-full px-16">
+  <aside class="flex flex-col bg-gray-100 rounded-tl-[50px] rounded-bl-[50px] px-4 py-6">
+    <div class="flex items-center flex-col mt-6 w-96">
+      <div class="flex justify-between text-center px-10 gap-10">
+        <a class="btn--transaction-type bg-red-800 basis-1/2" data-turbo-frame="new_transaction" href="/wallets/131/transactions/new?type=expense">-</a>
+
+        <a class="btn--transaction-type bg-green-800 basis-1/2" data-turbo-frame="new_transaction" href="/wallets/131/transactions/new?type=income">+</a>
+      </div>
+      <div class="overflow-y-scroll h-[calc(100vh-288px)]">
+        <turbo-frame id="index_transaction" src="https://hotwallets-staging.herokuapp.com/wallets/131/transactions">
+        <turbo-frame id="new_transaction"></turbo-frame>
+        <div id="wallet_transactions"></div>
+        </turbo-frame>
+      </div>
+
+    </div>
+  </aside>
+  <section class="w-screen rounded-tr-[50px] rounded-br-[50px] bg-gray-300/50 flex flex-col justify-start px-6 py-2">
+    <div class="flex items-center justify-start">
+      <div class="flex mt-2 gap-4 pb-2 ml-4">
+        <div class="flex items-center space-x-1 mx-auto">
+          <div class="flex flex-shrink-0 -space-x-2">   
+            <div class="w-8 h-8 text-xs" hidden=""></div>
+            <div class="w-11 h-11 text-m" hidden=""></div>
+            <div class="w-16 h-16" hidden=""></div>
+          </div> 
+        </div>
+      </div>
+        <div class="flex flex-col justify-start items-center mb-10">
+          <h1 class="text-black text-8xl font-bold font-mono mt-8">
+            <%= number_to_currency(@wallet.balance) %>
+          </h1>
+        </div>
+    </div>
+  </section>
+</section>
+
+
+

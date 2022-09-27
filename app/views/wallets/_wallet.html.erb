@@ -1,0 +1,18 @@
+<% if wallet.user_id == current_user.id %>
+  <div id="<%= dom_id wallet %>">
+    <%= link_to wallet do %>
+      <div class="border-2 border-gray-400 w-72 h-72 rounded-[64px] flex flex-col justify-center items-center p-8 hover:bg-gray-100/75 hover:border-4 group">
+          <p class="text-xl text-gray-800 font-bold text-center group-hover:text-black mb-2"><%= wallet.name %></p>
+
+          <p class="text-4xl text-gray-800 font-bold text-center group-hover:text-black mb-2">
+            Balance <br>
+            <%= number_to_currency(wallet.balance) %>
+          </p>
+
+          <p class="text-sm text-gray-500 text-center group-hover:text-black mb-2">
+            Updated <%= wallet.updated_at %>
+          </p>
+      </div>
+    <% end %>
+  </div>
+<% end %>
