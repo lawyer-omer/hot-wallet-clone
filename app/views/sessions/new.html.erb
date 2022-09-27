@@ -1,0 +1,36 @@
+ <main class="container mx-auto mt-5 px-5">
+   <div class="flex flex-col justify-center items-center mx-auto w-full">
+    <div class="justify-center mt-16 ml-16">
+      <h1 class="flex items-center mt-2">
+              <span class="font-bold text-transparent text-8xl bg-clip-text bg-gradient-to-r from-[#CE00D2] to-zinc-700">
+                HOT
+              </span>
+              <span class="font-bold text-transparent text-8xl bg-clip-text  bg-gradient-to-r via-black from-black to-[#CE00D2]">
+                Wallet
+              </span>
+      </h1>
+      <%= form_for :session, url: session_path do |form| %>
+        <div class="flex flex-col justify-center items-center w-96">
+          <div class="flex flex-col my-3 w-full">
+            <%= form.label :email, class:"form--label" %>
+            <%= form.email_field :email, class: "form--input" %>
+            <div data-lastpass-icon-root="true" style="position: relative !important; height: 0px !important; width: 0px !important; float: left !important;"></div></div>
+
+          <div class="flex flex-col my-3 w-full">
+            <%= form.label :password, class:"form--label" %>
+            <%= form.password_field :password, class: "form--input" %>
+          <div data-lastpass-icon-root="true" style="position: relative !important; height: 0px !important; width: 0px !important; float: left !important;"></div></div>
+          
+          <div aria-label="Actions">
+            <div class="flex flex-col justify-center items-center">
+            <%= form.submit "Log in", class: "gradient--link form--submit" %>
+            </div>
+            <br><br>
+            <p>New user? <%= link_to "Sign up now!", sign_up_path %></p>
+          </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+</main>
+

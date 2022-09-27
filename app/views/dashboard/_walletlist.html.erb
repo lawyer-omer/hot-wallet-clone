@@ -1,0 +1,81 @@
+<section class="flex justify-center flex-col items-center w-full pt-10">
+  <div class="ml-2 w-96">
+    <div class="relative" data-controller="dropdown transition" aria-haspopup="true" aria-expanded="true" data-dropdown-open-value="true">
+  <div data-action="click->dropdown#toggle" role="button" data-dropdown-target="button" data-transition-target="trigger">
+    <button class="bg-white flex text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" aria-haspopup="true">
+      <span class="sr-only">Open user menu</span>
+            </button><button class="btn--gradient items-center w-full">Add Wallet</button>
+
+    
+  </div>
+  <div data-dropdown-target="menu" data-helpers--popover-target="menu" data-transition-target="toggle" data-transition-enter="transition ease-out duration-100" data-transition-enter-start="transform opacity-0 scale-95" data-transition-enter-end="transform opacity-100 scale-100" data-transition-leave="transition ease-in duration-75" data-transition-leave-start="transform opacity-100 scale-100" data-transition-leave-end="transform opacity-0 scale-95" class="z-50 mt-2 min-w-max rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5 absolute origin-top-right right-0" role="menu" aria-orientation="vertical" aria-labelledby="user-menu">
+    <div class="py-1 divide-y">
+      
+      <turbo-frame loading="lazy" id="new_wallet" src="https://hotwallets-staging.herokuapp.com/"></turbo-frame>
+
+    </div>
+  </div>
+</div>
+  </div>
+  <div class="mt-10">
+    <div id="wallets" class="grid grid-cols-3 gap-10"><a data-turbo-frame="_top" id="wallet_132" href="/wallets/132">
+  <div class="border-2 border-gray-400 w-72 h-72 rounded-[64px] flex flex-col justify-center items-center p-8 hover:bg-gray-100/75 hover:border-4 group">
+    <p class="text-xl text-gray-800 font-bold text-center group-hover:text-black mb-2">asd</p>
+
+    <p class="text-4xl text-gray-800 font-bold text-center group-hover:text-black mb-2">
+      Balance <br>
+      $0.00
+    </p>
+
+    <p class="text-sm text-gray-500 text-center group-hover:text-black mb-2">
+      Updated less than a minute ago,
+      from 
+    </p>
+  </div>
+</a>
+      <a data-turbo-frame="_top" id="wallet_131" href="/wallets/131">
+  <div class="border-2 border-gray-400 w-72 h-72 rounded-[64px] flex flex-col justify-center items-center p-8 hover:bg-gray-100/75 hover:border-4 group">
+    <p class="text-xl text-gray-800 font-bold text-center group-hover:text-black mb-2">test walle</p>
+
+    <p class="text-4xl text-gray-800 font-bold text-center group-hover:text-black mb-2">
+      Balance <br>
+      $0.00
+    </p>
+
+    <p class="text-sm text-gray-500 text-center group-hover:text-black mb-2">
+      Updated 4 minutes ago,
+      from 
+    </p>
+  </div>
+</a><a data-turbo-frame="_top" id="wallet_125" href="/wallets/125">
+  <div class="border-2 border-gray-400 w-72 h-72 rounded-[64px] flex flex-col justify-center items-center p-8 hover:bg-gray-100/75 hover:border-4 group">
+    <p class="text-xl text-gray-800 font-bold text-center group-hover:text-black mb-2">Aile</p>
+
+    <p class="text-4xl text-gray-800 font-bold text-center group-hover:text-black mb-2">
+      Balance <br>
+      $0.00
+    </p>
+
+    <p class="text-sm text-gray-500 text-center group-hover:text-black mb-2">
+      Updated 3 days ago,
+      from 
+    </p>
+  </div>
+</a><a data-turbo-frame="_top" id="wallet_124" href="/wallets/124">
+  <div class="border-2 border-gray-400 w-72 h-72 rounded-[64px] flex flex-col justify-center items-center p-8 hover:bg-gray-100/75 hover:border-4 group">
+    <p class="text-xl text-gray-800 font-bold text-center group-hover:text-black mb-2">My Wallet</p>
+
+    <p class="text-4xl text-gray-800 font-bold text-center group-hover:text-black mb-2">
+      Balance <br>
+      $750.00
+    </p>
+
+    <p class="text-sm text-gray-500 text-center group-hover:text-black mb-2">
+      Updated 3 days ago,
+      from Omer Aydin
+    </p>
+  </div>
+</a>
+    </div>
+  </div>
+</section>
