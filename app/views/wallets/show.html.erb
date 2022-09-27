@@ -2,9 +2,9 @@
   <aside class="flex flex-col bg-gray-100 rounded-tl-[50px] rounded-bl-[50px] px-4 py-6">
     <div class="flex items-center flex-col mt-6 w-96">
       <div class="flex justify-between text-center px-10 gap-10">
-        <a class="btn--transaction-type bg-red-800 basis-1/2" data-turbo-frame="new_transaction" href="/wallets/131/transactions/new?type=expense">-</a>
+        <a class="btn--transaction-type bg-red-800 basis-1/2" >-</a>
 
-        <a class="btn--transaction-type bg-green-800 basis-1/2" data-turbo-frame="new_transaction" href="/wallets/131/transactions/new?type=income">+</a>
+        <a class="btn--transaction-type bg-green-800 basis-1/2">+</a>
       </div>
       <div class="overflow-y-scroll h-[calc(100vh-288px)]">
         <turbo-frame id="index_transaction" src="https://hotwallets-staging.herokuapp.com/wallets/131/transactions">
